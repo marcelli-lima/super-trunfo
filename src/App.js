@@ -30,11 +30,19 @@ class App extends React.Component {
     });
   }
 
+  onSaveButtonClick = () => {
+    console.log('clicou');
+  }
+
   render() {
     return (
       <div>
         <h1>Tryunfo</h1>
-        <Form onInputChange={ this.onInputChange } value={ this.state } />
+        <Form
+          onSaveButtonClick={ this.onSaveButtonClick }
+          onInputChange={ this.onInputChange }
+          value={ this.state }
+        />
       </div>
     );
   }
