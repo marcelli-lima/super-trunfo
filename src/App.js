@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Form from './components/Form';
+import Card from './components/Card';
 
 const initial = {
   cardName: '',
@@ -12,7 +13,7 @@ const initial = {
   cardRare: '',
   cardTrunfo: false,
   hasTrunfo: false,
-  isSaveButtonDisabled: false,
+  isSaveButtonDisabled: true,
 };
 
 class App extends React.Component {
@@ -35,6 +36,17 @@ class App extends React.Component {
   }
 
   render() {
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+      isSaveButtonDisabled,
+    } = this.state;
     return (
       <div>
         <h1>Tryunfo</h1>
@@ -42,6 +54,17 @@ class App extends React.Component {
           onSaveButtonClick={ this.onSaveButtonClick }
           onInputChange={ this.onInputChange }
           value={ this.state }
+          isSaveButtonDisabled={ isSaveButtonDisabled }
+        />
+        <Card
+          cardName={ cardName }
+          cardDescription={ cardDescription }
+          cardAttr1={ cardAttr1 }
+          cardAttr2={ cardAttr2 }
+          cardAttr3={ cardAttr3 }
+          cardImage={ cardImage }
+          cardRare={ cardRare }
+          cardTrunfo={ cardTrunfo }
         />
       </div>
     );
