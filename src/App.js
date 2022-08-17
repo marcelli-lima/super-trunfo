@@ -36,13 +36,6 @@ class App extends React.Component {
     this.state = initial;
   }
 
-  validateTrunfo = () => {
-    const { cardTrunfo } = this.state;
-    if (cardTrunfo) {
-      this.setState({ hasTrunfo: true });
-    }
-  }
-
   onInputChange = ({ target }) => {
     const { name } = target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -54,7 +47,10 @@ class App extends React.Component {
   onSaveButtonClick = () => {
     const newCard = { ...this.state };
     delete newCard.CARDS;
-    this.validateTrunfo();
+    const { cardTrunfo } = this.state;
+    if (cardTrunfo) {
+      this.setState({ hasTrunfo: true });
+    }
     this.setState(({ CARDS }) => ({ CARDS: [...CARDS, newCard] }));
     this.setState(cleanState);
   }
@@ -85,6 +81,14 @@ class App extends React.Component {
       && Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3) <= sum
     ) return this.setState({ isSaveButtonDisabled: false });
     this.setState({ isSaveButtonDisabled: true });
+  }
+
+  deleteCard = (e) => {
+    const { CARDS } = this.state;
+    const filterCard = CARDS.filter((card) => card.cardName !== e.target.id);
+    const cardRemoved = CARDS.find((elem) => elem.cardName === e.target.id);
+    if (cardRemoved.cardTrunfo) this.setState({ hasTrunfo: false });
+    this.setState({ CARDS: filterCard });
   }
 
   enableSaveBtn() {
@@ -127,6 +131,7 @@ class App extends React.Component {
           hasTrunfo={ hasTrunfo }
         />
         <Card
+          // value={ this.state }
           cardName={ cardName }
           cardDescription={ cardDescription }
           cardAttr1={ cardAttr1 }
@@ -141,6 +146,15 @@ class App extends React.Component {
             CARDS.map((card) => (
               <div key={ card.cardName }>
                 <Card { ...card } />
+                {console.log(card)}
+                <button
+                  id={ card.cardName }
+                  type="button"
+                  data-testid="delete-button"
+                  onClick={ this.deleteCard }
+                >
+                  Exluir
+                </button>
               </div>
             ))
           }
