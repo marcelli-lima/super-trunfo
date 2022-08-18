@@ -27,6 +27,9 @@ const initial = {
   hasTrunfo: false,
   isSaveButtonDisabled: true,
   CARDS: [],
+  filterRare: '',
+  filterName: '',
+  filterTrunfo: false,
 };
 
 class App extends React.Component {
@@ -34,6 +37,14 @@ class App extends React.Component {
     super(props);
 
     this.state = initial;
+  }
+
+  handleFilter = ({ target }) => {
+    const { name } = target;
+    console.log(target);
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    console.log(value);
+    this.setState({ [name]: value });
   }
 
   onInputChange = ({ target }) => {
@@ -112,7 +123,18 @@ class App extends React.Component {
       isSaveButtonDisabled,
       hasTrunfo,
       CARDS,
+      filterRare,
+      filterName,
+      filterTrunfo,
     } = this.state;
+
+    const cardsFiltered = CARDS
+      .filter((card) => (filterTrunfo ? card.cardTrunfo === true : card))
+      .filter((card) => card.cardName.includes(filterName))
+      .filter((card) => (
+        filterRare === 'todas' || !filterRare
+          ? card.cardRare : card.cardRare === filterRare));
+
     return (
       <div>
         <h1>Tryunfo</h1>
@@ -142,21 +164,52 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
         />
         <div>
+          <input
+            data-testid="name-filter"
+            type="text"
+            onChange={ this.handleFilter }
+            name="filterName"
+          />
+        </div>
+        <div>
+          <select
+            data-testid="rare-filter"
+            onChange={ this.handleFilter }
+            name="filterRare"
+          >
+            <option value="todas">todas</option>
+            <option value="normal">normal</option>
+            <option value="raro">raro</option>
+            <option value="muito raro">muito raro</option>
+          </select>
+        </div>
+        <div>
+          <label htmlFor="filterTrunfo">
+            <input
+              type="checkbox"
+              name="filterTrunfo"
+              data-testid="trunfo-filter"
+              onChange={ this.handleFilter }
+            />
+            Filter Super Trunfo
+          </label>
+        </div>
+        <div>
           {
-            CARDS.map((card) => (
-              <div key={ card.cardName }>
-                <Card { ...card } />
-                {console.log(card)}
-                <button
-                  id={ card.cardName }
-                  type="button"
-                  data-testid="delete-button"
-                  onClick={ this.deleteCard }
-                >
-                  Exluir
-                </button>
-              </div>
-            ))
+            cardsFiltered
+              .map((card) => (
+                <div key={ card.cardName }>
+                  <Card { ...card } />
+                  <button
+                    id={ card.cardName }
+                    type="button"
+                    data-testid="delete-button"
+                    onClick={ this.deleteCard }
+                  >
+                    Exluir
+                  </button>
+                </div>
+              ))
           }
         </div>
       </div>
