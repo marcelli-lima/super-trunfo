@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../card.css';
 
 class Card extends React.Component {
   render() {
@@ -14,27 +15,32 @@ class Card extends React.Component {
       cardTrunfo,
     } = this.props;
     return (
-      <section>
-        <h3 data-testid="name-card">
-          {cardName}
-        </h3>
-        <img data-testid="image-card" src={ cardImage } alt={ cardName } />
-        <p data-testid="description-card">
-          {cardDescription}
-        </p>
-        <p data-testid="attr1-card">
-          {cardAttr1}
-        </p>
-        <p data-testid="attr2-card">
-          {cardAttr2}
-        </p>
-        <p data-testid="attr3-card">
-          {cardAttr3}
-        </p>
-        <p data-testid="rare-card">
-          {cardRare}
-        </p>
-        {cardTrunfo && <span data-testid="trunfo-card">Super Trunfo</span>}
+      <section className="container-card">
+        <div className="card">
+          <h3 id="name-card" data-testid="name-card">
+            {cardName}
+          </h3>
+          <img data-testid="image-card" src={ cardImage } alt={ cardName } />
+          <p id="card-description" data-testid="description-card">
+            {cardDescription}
+          </p>
+          <p className="card-atributo" data-testid="attr1-card">
+            Ataque:.........
+            <span>{cardAttr1}</span>
+          </p>
+          <p className="card-atributo" data-testid="attr2-card">
+            Defesa:.........
+            <span>{cardAttr2}</span>
+          </p>
+          <p className="card-atributo" data-testid="attr3-card">
+            HP:...........
+            <span>{cardAttr3}</span>
+          </p>
+          <p id="raridade" data-testid="rare-card">
+            {cardRare}
+            {cardTrunfo && <span data-testid="trunfo-card"> Super Trunfo </span>}
+          </p>
+        </div>
       </section>
     );
   }

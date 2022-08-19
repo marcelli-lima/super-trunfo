@@ -1,4 +1,78 @@
-body {
+.container {
+  width: 100%;
+background: #FAFAFA;
+}
+
+.card-container {
+  position: absolute;
+  width: 763px;
+  height: 700px;
+  left: 690px;
+  top: 0px;
+  
+  background: #023031;
+}
+
+.card-container h2 {
+  margin-left: 86px;
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 29px;
+  background: #023031;
+  color: #FFFFFF;
+}
+
+h2 {
+  margin-bottom: 100px;
+}
+
+#all-cards {
+font-family: 'Epilogue';
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 29px;
+color: #444955;
+margin-top: 100px;
+}
+
+#filter {
+font-family: 'Epilogue';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 18px;
+color: #444955;
+}
+
+.filter-card {
+  display: flex;
+flex-direction: column;
+width: 305px;
+height: 35px;
+align-items: flex-start;
+padding: 4px 8px;
+gap: 1px;
+background: #FFFFFF;
+border: 1px solid #3D495C;
+border-radius: 6px;
+margin-bottom: 20px;
+}
+
+.deck-cartas {
+  margin-left: 400px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.deck-cartas div {
+  width: 320px;
+}
+
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +84,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */

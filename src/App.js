@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Form from './components/Form';
 import Card from './components/Card';
+import './index.css';
 
 const cleanState = {
   cardName: '',
@@ -136,8 +137,7 @@ class App extends React.Component {
           ? card.cardRare : card.cardRare === filterRare));
 
     return (
-      <div>
-        <h1>Tryunfo</h1>
+      <div className="container">
         <Form
           onSaveButtonClick={ this.onSaveButtonClick }
           onInputChange={ this.onInputChange }
@@ -152,19 +152,26 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
           hasTrunfo={ hasTrunfo }
         />
-        <Card
+        <div className="card-container">
+          <h2>Pré visualização</h2>
+          <Card
+            { ...this.state }
           // value={ this.state }
-          cardName={ cardName }
-          cardDescription={ cardDescription }
-          cardAttr1={ cardAttr1 }
-          cardAttr2={ cardAttr2 }
-          cardAttr3={ cardAttr3 }
-          cardImage={ cardImage }
-          cardRare={ cardRare }
-          cardTrunfo={ cardTrunfo }
-        />
+          // cardName={ cardName }
+          // cardDescription={ cardDescription }
+          // cardAttr1={ cardAttr1 }
+          // cardAttr2={ cardAttr2 }
+          // cardAttr3={ cardAttr3 }
+          // cardImage={ cardImage }
+          // cardRare={ cardRare }
+          // cardTrunfo={ cardTrunfo }
+          />
+        </div>
         <div>
+          <h3 id="all-cards">Todas as cartas</h3>
+          <p id="filter">Filtros de busca</p>
           <input
+            className="filter-card"
             data-testid="name-filter"
             type="text"
             onChange={ this.handleFilter }
@@ -173,6 +180,7 @@ class App extends React.Component {
         </div>
         <div>
           <select
+            className="filter-card"
             data-testid="rare-filter"
             onChange={ this.handleFilter }
             name="filterRare"
@@ -186,6 +194,7 @@ class App extends React.Component {
         <div>
           <label htmlFor="filterTrunfo">
             <input
+              id="filterTrunfo"
               type="checkbox"
               name="filterTrunfo"
               data-testid="trunfo-filter"
@@ -194,7 +203,7 @@ class App extends React.Component {
             Filter Super Trunfo
           </label>
         </div>
-        <div>
+        <div className="deck-cartas">
           {
             cardsFiltered
               .map((card) => (

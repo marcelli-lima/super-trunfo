@@ -1,0 +1,95 @@
+.container-card {
+background: #FFFFFF;
+border-radius: 10px;
+margin-left: auto;
+margin-right: auto;
+display: flex;
+width: 310px;
+height: 460px;
+}
+
+.card {
+background: #036B52;
+border-radius: 10px;
+width: 300px;
+height: 440px;
+margin: auto;
+margin-top: 10px;
+bottom: 0;
+right: 0;
+left: 0;
+top: 0;
+}
+
+#name-card {
+  font-family: 'Epilogue';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 29px;
+text-align: center;
+color: #FFFFFF;
+
+background: #023031;
+border-radius: 10px 10px 0px 0px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  padding: 0px 50px;
+  background-image: url("../images.png");
+}
+
+#card-description {
+font-family: 'Epilogue';
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 10px;
+text-align: center;
+color: #FFFFFF;
+}
+
+.card-atributo {
+  background: #FFFFFF;
+  font-family: 'Epilogue';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 150%;
+
+color: #3D495C;
+display: flex;
+justify-content: space-between;
+padding: 0 10px;
+}
+
+#raridade {
+  color: black;
+font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  bottom: 15px;
+}
+
+button {
+  color: #003BE5;
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 10px;
+width: 118px;
+height: 40px;
+background: #FFFFFF;
+
+border: 2px solid #003BE5;
+border-radius: 2px;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin-left: auto;
+margin-right: auto;
+}
