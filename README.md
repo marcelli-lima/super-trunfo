@@ -38,6 +38,6 @@
 
  <img align="center" alt="Celi-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"> JavaScript
 
-![chrome_0JpXQym9Id](https://user-images.githubusercontent.com/87941765/185652469-f4a79331-0808-4655-964f-b80ee9a19ec4.gif)
+![chrome_ryd2AA1EZp](https://user-images.githubusercontent.com/87941765/185653532-209b6864-634d-4ae5-997c-a7c96bafdd02.gif)
 
 
