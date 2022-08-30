@@ -1,109 +1,105 @@
 * {
-background: #FAFAFA;
-
+  background: #FAFAFA;
 }
 
 .form-container {
-  width: 50%;
   text-align: center;
+  width: 50%;
 }
 
 h1 {
-  width: 50%;
-  text-align: center;
+  color: #444955;
   font-family: 'Epilogue';
+  font-size: 28px;
   font-style: normal;
   font-weight: 700;
-  font-size: 28px;
   line-height: 29px;
-
-  color: #444955;
+  text-align: center;
+  width: 50%;
 }
 
 label {
+  color: #3D495C;
   font-family: 'Verdana';
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
   line-height: 150%;
-  color: #3D495C;
 }
 
 #name-input {
+  align-items: center;
+  background: #FFFFFF;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  margin-left: auto;
-  margin-right: auto;
-
-  background: #FFFFFF;
-  width: 375px;
   height: 30px;
   left: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
   top: 0px;
+  width: 375px;
 }
 
 textarea {
+  align-items: center;
+  background: #FFFFFF;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  margin-left: auto;
-  margin-right: auto;
-
-  background: #FFFFFF;
-  width: 375px;
   height: 60px;
   left: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
   top: 0px;
+  width: 375px;
 }
 
 .input-atributo {
-  margin-top: 37px;
-  box-sizing: border-box;
   background: #FFFFFF;
+  margin-top: 37px;
   border: 1px solid #29313D;
   border-radius: 2px;
+  box-sizing: border-box;
 }
 
 #input-image {
-  margin-top: 40px;
   background: #FFFFFF;
   border: 1px solid #023031;
   border-radius: 2px;
   margin-bottom: 30px;
+  margin-top: 40px;
 }
 
 #raridade-input {
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  padding: 0px;
-  margin-left: auto;
-  margin-right: auto;
   background: #FFFFFF;
   border: 1px solid #023031;
   border-radius: 2px;
-  width: 375px;
+  display: flex;
+  flex-direction: row;
   height: 30px;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  width: 375px;
 }
 
 #button-save {
+  align-items: center;
+  background: #003BE5;
+  border-radius: 2px;
+  color: #FFFFFF;
   display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 8px 32px;
-gap: 10px;
-width: 115px;
-height: 40px;
-margin-left: 129px;
-background: #003BE5;
-border-radius: 2px;
-flex: none;
-order: 0;
-flex-grow: 0;
-color: #FFFFFF;
+  flex: none;
+  flex-direction: row;
+  flex-grow: 0;
+  gap: 10px;
+  height: 40px;
+  justify-content: center;
+  margin-left: 129px;
+  order: 0;
+  padding: 8px 32px;
+  width: 115px;
 }

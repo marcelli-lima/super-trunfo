@@ -1,104 +1,98 @@
 .container-card {
-background: #FFFFFF;
-border-radius: 10px;
-margin-left: auto;
-margin-right: auto;
-display: flex;
-width: 310px;
-height: 460px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  height: 460px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 310px;
 }
 
 .card {
-background: #036B52;
-border-radius: 10px;
-width: 300px;
-height: 440px;
-margin: auto;
-margin-top: 10px;
-bottom: 0;
-right: 0;
-left: 0;
-top: 0;
+  background: #036B52;
+  border-radius: 10px;
+  bottom: 0;
+  height: 440px;
+  left: 0;
+  margin: auto;
+  margin-top: 10px;
+  right: 0;
+  top: 0;
+  width: 300px;
 }
 
 #name-card {
+  background: #023031;
+  border-radius: 10px 10px 0px 0px;
+  color: #FFFFFF;
   font-family: 'Epilogue';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 29px;
-text-align: center;
-color: #FFFFFF;
-
-background: #023031;
-border-radius: 10px 10px 0px 0px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 29px;
+  text-align: center;
 }
 
 img {
-  width: 200px;
+  background: #036B52;
   height: 200px;
   padding: 0px 50px;
-background: #036B52;
-
-  /* background-image: url("../images.png"); */
+  width: 200px;
 }
 
 #card-description {
-background: #036B52;
-font-family: 'Epilogue';
-font-style: normal;
-font-weight: 300;
-font-size: 12px;
-line-height: 10px;
-text-align: center;
-color: #FFFFFF;
+  background: #036B52;
+  color: #FFFFFF;
+  font-family: 'Epilogue';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 10px;
+  text-align: center;
 }
 
 .card-atributo {
   background: #FFFFFF;
+  color: #3D495C;
+  display: flex;
   font-family: 'Epilogue';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 150%;
-
-color: #3D495C;
-display: flex;
-justify-content: space-between;
-padding: 0 10px;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: space-between;
+  line-height: 150%;
+  padding: 0 10px;
 }
 
 #raridade {
-background: #036B52;
-
-  color: black;
-font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  position: relative;
+  background: #036B52;
   bottom: 15px;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
 }
 
 button {
+  align-items: center;
+  background: #FFFFFF;
+  border: 2px solid #003BE5;
+  border-radius: 2px;
   color: #003BE5;
   display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-gap: 10px;
-width: 118px;
-height: 40px;
-background: #FFFFFF;
-
-border: 2px solid #003BE5;
-border-radius: 2px;
-flex: none;
-order: 0;
-flex-grow: 0;
-margin-left: auto;
-margin-right: auto;
+  flex: none;
+  flex-direction: row;
+  flex-grow: 0;
+  gap: 10px;
+  height: 40px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  order: 0;
+  width: 118px;
 }
 
 #span-trunfo {
-background: #036B52;
+  background: #036B52;
 }
